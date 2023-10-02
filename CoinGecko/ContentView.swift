@@ -43,7 +43,10 @@ extension ContentView {
         
         let service = CoinGeckoClient()
         
-        func fetchPrice(coinName: String, currency: String) async {
+        func fetchPrice(
+            coinName: String,
+            currency: String
+        ) async {
             self.error = nil
             do {
                 let result = try await service.fetch(
